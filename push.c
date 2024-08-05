@@ -10,7 +10,7 @@
 void push(stack_t **stack, unsigned int LineN)
 {
 
-int value, index;
+int value;
 stack_t *newElement;
 char *token;
 
