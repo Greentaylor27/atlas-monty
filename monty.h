@@ -39,12 +39,17 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/* Global Variable*/
 
-stack_t *FlowStack;
 
 /* Functions */
 
-void check(char *opcode, stack_t **stack, unsigned int Ln);
+void check(char *opcode, stack_t **stack, unsigned int LineN);
+void push(stack_t **stack, unsigned int LineN);
+void pall(stack_t **stack, unsigned int LineN);
+void pint(stack_t **stack, unsigned int LineN);
+void pop(stack_t **stack, unsigned int LineN);
+void swap(stack_t **stack, unsigned int LineN);
+void add(stack_t **stack, unsigned int LineN);
+void nop(stack_t **stack, unsigned int LineN);
 
 #endif 

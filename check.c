@@ -5,10 +5,10 @@
  * 
  * @opcode: opcode to be matched
  * @stack: top of the stack
- * @ln: line number
+ * @LineN: line number
  */
 
-void check(char *opcode, stack_t **stack, unsigned int Ln)
+void check(char *opcode, stack_t **stack, unsigned int LineN)
 {
 	int i = 0;
 
@@ -27,11 +27,11 @@ void check(char *opcode, stack_t **stack, unsigned int Ln)
 	{
 		if (strcmp(opcode, commands[i].opcode) == 0)
 		{
-			commands[i].f(stack, Ln);
+			commands[i].f(stack, LineN);
 			return;
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: Unknown instruction %s", Ln, opcode);
+	fprintf(stderr, "L%d: Unknown instruction %s", LineN, opcode);
 	exit(EXIT_FAILURE);
 }
